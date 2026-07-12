@@ -1,7 +1,19 @@
-import "./App.css";
+import { CountDown } from "./components/CountDown/CountDown";
+import { Logo } from "./components/Logo/Logo";
+import { Menu } from "./components/Menu/Menu";
+import { Form } from "./components/Form/Form";
 
-function App() {
-    return <h1>Hello World!</h1>;
+export default function App() {
+    return (
+        <>
+            <Logo />
+        
+            <Menu />  
+        
+            <CountDown />
+        
+            <Form />
+            
+        </>
+    );
 }
-
-export default App;

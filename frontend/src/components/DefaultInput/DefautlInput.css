@@ -1,0 +1,41 @@
+.task {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+label {
+    font-size: clamp(1.4rem, 1.6vw, 1.8rem);
+    font-weight: 700;
+    text-align: center;
+}
+
+input {
+    background-color: transparent;
+    border: 2px solid var(--secondary);
+    border-radius: 5px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+    transition: 0.3s ease-in-out;
+    text-align: center;
+    font-size: clamp(1rem, 1vw, 1.2rem);
+    font-weight: 400;
+    text-align: center;
+    outline: var(--tertiary);
+    caret-color: var(--white);
+    color: var(--white);
+    padding: 0.4rem;
+
+    &:hover {
+        border: 2px solid var(--tertiary);
+        box-shadow: 2px 4px 30px rgba(0, 0, 0, 0.3);
+    }
+}
+
+input:disabled{
+    border: 2px solid var(--text-muted);
+    color: var(--text-light);
+}
+
+input::placeholder {
+    font-style: italic;
+}
