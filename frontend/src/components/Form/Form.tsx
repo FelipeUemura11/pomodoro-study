@@ -1,3 +1,4 @@
+import { Cycles } from "../Cycles/Cycles";
 import { DefaultInput } from "../DefaultInput/DefaultInput";
 
 import "./Form.css";
@@ -19,8 +20,7 @@ export function Form() {
                         <p>Lorem ipsum dolor sit amet.</p>
                     </div>
                     <div className="formRow">
-                        <p>Ciclos.</p>
-                        <p>0 0 0 0 0 0 0</p>
+                        <Cycles />
                     </div>
                     <div className="formRow">
                         <button>Enviar</button>

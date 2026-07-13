@@ -1,7 +1,8 @@
 .timer {
-    font-size: clamp(8rem, 14vw, 10rem);
+    font-size: clamp(2.8rem, 18vw, 9rem);
     font-weight: 700;
     color: var(--white);
     margin-top: 0;
     margin-bottom: 0;
+    text-align: center;
 }

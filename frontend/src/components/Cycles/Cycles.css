@@ -1,0 +1,32 @@
+.cycles {
+}
+
+.cycles-dots {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(0.4rem, 2vw, 1rem);
+    margin: 0.4rem auto;
+}
+
+.cycle-dot {
+    width: clamp(16px, 6vw, 30px);
+    height: clamp(16px, 6vw, 30px);
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    flex-shrink: 0;
+}
+
+.work-time {
+    background-color: var(--primary);
+}
+
+.break-time {
+    background-color: var(--secondary);
+}
+
+.long-work-time {
+    background-color: var(--tertiary);
+}

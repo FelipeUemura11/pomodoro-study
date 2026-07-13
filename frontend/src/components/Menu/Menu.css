@@ -2,11 +2,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 ul {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 1rem;
 }
 
@@ -14,8 +16,8 @@ li {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 70px;
-    height: 70px;
+    width: clamp(50px, 15vw, 70px);
+    height: clamp(50px, 15vw, 70px);
     background: var(--secondary);
     border-radius: 20px;
     color: var(--white);

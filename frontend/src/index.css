@@ -7,9 +7,7 @@
     --white: #fff;
     --text-muted: #6b7280;
     --text-light: #9ca3af;
-    --border: #e2e8f0;
-    --border-light: #f1f5f9;
-
+    
     --font-sans: "Segoe UI", system-ui, -apple-system, sans-serif;
 }
 
@@ -17,6 +15,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
 }
 
 body {
@@ -43,6 +46,7 @@ a {
 }
 
 .container {
+    width: 100%;
     max-width: 800px;
     display: flex;
     flex-direction: column;
