@@ -8,5 +8,15 @@
     width: 100%;
     max-width: 400px;
     text-align: center;
-    color: #fff;
+    color: var(--on-app-bg);
+}
+
+.formRow {
+    width: 100%;
+}
+
+.actions {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
 }

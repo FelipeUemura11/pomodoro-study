@@ -1,14 +1,55 @@
-:root {
+/*
+ * Tokens semânticos, não cores soltas: os componentes pedem "--on-app-bg" e o
+ * tema decide o valor. É o que permite trocar claro/escuro sem tocar em CSS de
+ * componente. O ThemeProvider escreve data-theme no <html>.
+ */
+:root,
+:root[data-theme="dark"] {
     --primary: #c96e4b;
+    --on-primary: #ffffff;
     --secondary: #5e4429;
     --tertiary: #eac8aa;
+
     --app-bg: linear-gradient(145deg, #1f100b 0%, #413d39 100%);
-    --text-dark: #171717;
-    --white: #fff;
-    --text-muted: #6b7280;
-    --text-light: #9ca3af;
-    
+    --on-app-bg: #f5f0eb;
+
+    --surface: #5e4429;
+    --on-surface: #ffffff;
+    --border: #5b5350;
+
+    --text-muted: #b3a89f;
+    --text-light: #8c8279;
+
+    --success: #2f7d4f;
+    --danger: #c0392b;
+
+    --shadow: rgba(0, 0, 0, 0.4);
+    --focus-ring: #eac8aa;
+
     --font-sans: "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+:root[data-theme="light"] {
+    --primary: #b4552f;
+    --on-primary: #ffffff;
+    --secondary: #8a6b4a;
+    --tertiary: #a97f52;
+
+    --app-bg: linear-gradient(145deg, #faf4ee 0%, #ecdfd1 100%);
+    --on-app-bg: #2b1a12;
+
+    --surface: #e0cdb8;
+    --on-surface: #3a2418;
+    --border: #cbb49c;
+
+    --text-muted: #6b5847;
+    --text-light: #8a7a68;
+
+    --success: #1e6b3c;
+    --danger: #a5281b;
+
+    --shadow: rgba(90, 60, 40, 0.18);
+    --focus-ring: #7a4a2a;
 }
 
 * {
@@ -17,7 +58,8 @@
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     width: 100%;
     overflow-x: hidden;
 }
@@ -25,7 +67,8 @@ html, body {
 body {
     font-family: var(--font-sans);
     background: var(--app-bg);
-    color: var(--text-dark);
+    background-attachment: fixed;
+    color: var(--on-app-bg);
     min-height: 100vh;
     line-height: 1.5;
     padding: 1.2rem;
@@ -36,7 +79,8 @@ button {
     font-family: inherit;
 }
 
-ul {
+ul,
+ol {
     list-style: none;
 }
 
@@ -60,4 +104,3 @@ a {
     align-items: center;
     margin: 0 auto;
 }
-

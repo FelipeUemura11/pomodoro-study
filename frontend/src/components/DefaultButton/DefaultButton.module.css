@@ -1,0 +1,37 @@
+/* O botão é o próprio elemento estilizado: envolvê-lo numa div clicável
+   criaria uma zona morta no padding, fora da área do <button>. */
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border: 2px solid var(--on-primary);
+    border-radius: 20px;
+    padding: 0.4rem;
+    color: var(--on-primary);
+    transition: box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
+    box-shadow: 0 2px 20px var(--shadow);
+
+    &:hover:not(:disabled) {
+        box-shadow: 0 4px 30px var(--shadow);
+        filter: brightness(0.85);
+    }
+
+    &:focus-visible {
+        outline: 2px solid var(--focus-ring);
+        outline-offset: 3px;
+    }
+
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+}
+
+.green {
+    background: var(--success);
+}
+
+.red {
+    background: var(--danger);
+}

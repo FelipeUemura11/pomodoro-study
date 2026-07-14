@@ -1,0 +1,48 @@
+.span {
+    font-size: clamp(1.2rem, 2vw, 1.4rem);
+    font-weight: 500;
+}
+
+.cyclesDots {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(0.4rem, 2vw, 1rem);
+    margin: 0.4rem auto;
+}
+
+.cycleDot {
+    width: clamp(16px, 6vw, 30px);
+    height: clamp(16px, 6vw, 30px);
+    border-radius: 50%;
+    box-shadow: 0 4px 15px var(--shadow);
+    flex-shrink: 0;
+    /* Ciclos ainda não alcançados ficam apagados; `done`/`active` reacendem. */
+    opacity: 0.35;
+    transition: opacity 0.35s ease-in-out, transform 0.35s ease-in-out;
+}
+
+.workTime {
+    background-color: var(--primary);
+}
+
+.breakTime {
+    background-color: var(--tertiary);
+}
+
+.done {
+    opacity: 0.85;
+}
+
+.active {
+    opacity: 1;
+    transform: scale(1.25);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .cycleDot {
+        transition: none;
+    }
+}

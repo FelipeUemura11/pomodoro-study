@@ -1,0 +1,75 @@
+.rosary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    width: 100%;
+}
+
+.label {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: var(--on-app-bg);
+    text-align: center;
+}
+
+.rosaryNumber {
+    color: var(--text-muted);
+}
+
+.decades {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    list-style: none;
+    width: 100%;
+}
+
+.decade {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(0.25rem, 1.2vw, 0.5rem);
+    padding: 0.4rem 0.7rem;
+    border-radius: 999px;
+    /* Borda transparente reservada: evita o layout deslocar ao ativar a dezena. */
+    border: 2px solid transparent;
+    opacity: 0.4;
+    transition: opacity 0.4s ease-in-out, border-color 0.4s ease-in-out;
+}
+
+.decade.active {
+    opacity: 1;
+    border-color: var(--primary);
+}
+
+.bead {
+    width: clamp(10px, 3.5vw, 18px);
+    height: clamp(10px, 3.5vw, 18px);
+    border-radius: 50%;
+    background: var(--secondary);
+    flex-shrink: 0;
+    transition: background 0.4s ease-in-out;
+}
+
+.decade.active .bead {
+    background: var(--primary);
+    box-shadow: 0 0 12px var(--primary);
+}
+
+.timer {
+    font-size: clamp(3rem, 5vw, 5rem);
+    line-height: 1;
+    font-weight: 700;
+    color: var(--on-app-bg);
+    text-align: center;
+    font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .decade,
+    .bead {
+        transition: none;
+    }
+}

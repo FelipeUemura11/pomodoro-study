@@ -1,0 +1,41 @@
+.wrapper {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    gap: 1.8rem;
+    color: var(--on-app-bg);
+}
+
+.title {
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+}
+
+.field {
+    width: 100%;
+}
+
+.note {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.resetButton {
+    background: none;
+    border: 2px solid var(--secondary);
+    border-radius: 8px;
+    color: var(--on-app-bg);
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    transition: border-color 0.3s ease-in-out;
+
+    &:hover {
+        border-color: var(--tertiary);
+    }
+
+    &:focus-visible {
+        outline: 2px solid var(--focus-ring);
+        outline-offset: 3px;
+    }
+}

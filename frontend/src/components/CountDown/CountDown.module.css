@@ -1,0 +1,9 @@
+.timer {
+    font-size: clamp(5rem, 6vw, 8rem);
+    line-height: 1;
+    font-weight: 700;
+    color: var(--on-app-bg);
+    text-align: center;
+    /* Evita o mostrador "pular" de largura a cada segundo. */
+    font-variant-numeric: tabular-nums;
+}
