@@ -1,6 +1,6 @@
 import { Component, type ErrorInfo, type ReactNode } from 'react';
 import { TriangleAlert } from 'lucide-react';
-import './ErrorBoundary.css';
+import styles from './ErrorBoundary.module.css';
 
 interface Props {
   children: ReactNode;
@@ -24,21 +24,21 @@ export default class ErrorBoundary extends Component<Props, State> {
   render() {
     if (this.state.hasError) {
       return (
-        <div className="error-boundary">
-          <div className="error-boundary__content">
-            <TriangleAlert className="error-boundary__icon" />
+        <div className={styles.errorBoundary}>
+          <div className={styles.content}>
+            <TriangleAlert className={styles.icon} />
 
-            <h2 className="error-boundary__title">
+            <h2 className={styles.title}>
               Algo deu errado
             </h2>
 
-            <p className="error-boundary__description">
+            <p className={styles.description}>
               Tente recarregar a página.
             </p>
 
             <button
               type="button"
-              className="error-boundary__button"
+              className={styles.button}
               onClick={() => this.setState({ hasError: false })}
             >
               Tentar novamente

@@ -1,32 +1,32 @@
 import { House, History, Settings, SunMoon } from "lucide-react";
-import "./Menu.css";
+import styles from "./Menu.module.css";
 
 export function Menu() {
     return (
         <div className="container">
             <div className="content">
-                <nav className="menu">
-                    <ul>
-                        <a href="#home">
-                            <li>
+                <nav className={styles.menu}>
+                    <ul className={styles.list}>
+                        <li className={styles.item}>
+                            <a href="#home">
                                 <House />
-                            </li>
-                        </a>
-                        <a href="#history">
-                            <li>
+                            </a>
+                        </li>
+                        <li className={styles.item}>
+                            <a href="#history">
                                 <History />
-                            </li>
-                        </a>
-                        <a href="#configs">
-                            <li>
+                            </a>
+                        </li>
+                        <li className={styles.item}>
+                            <a href="#configs">
                                 <Settings />
-                            </li>
-                        </a>
-                        <a href="#theme">
-                            <li>
+                            </a>
+                        </li>
+                        <li className={styles.item}>
+                            <a href="#theme">
                                 <SunMoon />
-                            </li>
-                        </a>
+                            </a>
+                        </li>
                     </ul>
                 </nav>
             </div>
