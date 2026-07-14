@@ -17,14 +17,14 @@
   width: 3rem;
   height: 3rem;
   margin-bottom: 1rem;
-  color: var(--text-dark);
+  color: var(--white);
 }
 
 .title {
   margin: 0;
   font-size: 1.25rem;
   font-weight: 700;
-  color: var(--text-dark);
+  color: var(--white);
 }
 
 .description {

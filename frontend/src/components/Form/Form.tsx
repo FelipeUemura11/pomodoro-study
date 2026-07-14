@@ -2,6 +2,8 @@ import { Cycles } from "../Cycles/Cycles";
 import { DefaultButton } from "../DefaultButton/DefaultButton";
 import { DefaultInput } from "../DefaultInput/DefaultInput";
 
+import { Play, Pause } from "lucide-react";
+
 import styles from "./Form.module.css";
 
 export function Form() {
@@ -24,7 +26,7 @@ export function Form() {
                         <Cycles />
                     </div>
                     <div className={styles.formRow}>
-                        <DefaultButton />
+                        <DefaultButton icon={<Play />} />
                     </div>
                 </form>
             </div>
