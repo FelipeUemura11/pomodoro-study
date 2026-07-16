@@ -61,7 +61,8 @@
 html,
 body {
     width: 100%;
-    overflow-x: hidden;
+    height: 100%;
+    overflow: hidden;
 }
 
 body {
@@ -69,9 +70,19 @@ body {
     background: var(--app-bg);
     background-attachment: fixed;
     color: var(--on-app-bg);
-    min-height: 100vh;
+    height: 100dvh;
     line-height: 1.5;
-    padding: 1.2rem;
+    padding: clamp(0.5rem, 2vh, 1.2rem);
+    display: flex;
+    flex-direction: column;
+}
+
+#root {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    width: 100%;
 }
 
 button {
@@ -92,13 +103,16 @@ a {
 .container {
     width: 100%;
     max-width: 800px;
+    min-height: 0;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
 }
 
 .content {
-    padding: 0.5rem;
+    width: 100%;
+    min-height: 0;
+    padding: clamp(0.2rem, 1vh, 0.5rem);
     display: flex;
     justify-content: center;
     align-items: center;

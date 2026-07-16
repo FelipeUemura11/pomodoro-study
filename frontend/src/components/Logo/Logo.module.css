@@ -1,6 +1,6 @@
 .image {
-    width: clamp(120px, 40vw, 235px);
-    height: clamp(120px, 40vw, 235px);
+    width: clamp(60px, min(40vw, 16vh), 235px);
+    height: clamp(60px, min(40vw, 16vh), 235px);
 }
 
 .img {

@@ -17,8 +17,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: clamp(50px, 15vw, 70px);
-    height: clamp(50px, 15vw, 70px);
+    width: clamp(40px, min(15vw, 8vh), 70px);
+    height: clamp(40px, min(15vw, 8vh), 70px);
     background: var(--surface);
     border: none;
     border-radius: 20px;

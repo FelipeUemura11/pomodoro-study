@@ -59,7 +59,7 @@
 }
 
 .timer {
-    font-size: clamp(3rem, 5vw, 5rem);
+    font-size: clamp(2rem, min(5vw, 8vh), 5rem);
     line-height: 1;
     font-weight: 700;
     color: var(--on-app-bg);
