@@ -1,5 +1,5 @@
 .span {
-    font-size: clamp(1.2rem, 2vw, 1.4rem);
+    font-size: clamp(0.8rem, min(2vw, 2.4cqh), 1.4rem);
     font-weight: 500;
 }
 
@@ -9,13 +9,13 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: clamp(0.4rem, 2vw, 1rem);
+    gap: clamp(0.2rem, min(2vw, 1cqh), 1rem);
     margin: 0.4rem auto;
 }
 
 .cycleDot {
-    width: clamp(16px, 6vw, 30px);
-    height: clamp(16px, 6vw, 30px);
+    width: clamp(10px, min(6vw, 3cqh), 30px);
+    height: clamp(10px, min(6vw, 3cqh), 30px);
     border-radius: 50%;
     box-shadow: 0 4px 15px var(--shadow);
     flex-shrink: 0;

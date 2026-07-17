@@ -1,7 +1,7 @@
 .form {
     display: flex;
     flex-direction: column;
-    gap: clamp(0.8rem, 3vh, 2.4rem);
+    gap: clamp(0.4rem, 2.5cqh, 2.4rem);
     align-items: center;
     justify-content: center;
     margin: 0 auto;

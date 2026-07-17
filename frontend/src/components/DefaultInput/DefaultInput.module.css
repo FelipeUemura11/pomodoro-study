@@ -1,12 +1,12 @@
 .task {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: clamp(0.3rem, 1cqh, 1rem);
     width: 100%;
 }
 
 .label {
-    font-size: clamp(1.4rem, 1.6vw, 1.8rem);
+    font-size: clamp(1rem, min(1.6vw, 2.2cqh), 1.8rem);
     font-weight: 700;
     text-align: center;
 }
@@ -24,7 +24,7 @@
     font-weight: 400;
     caret-color: var(--on-app-bg);
     color: var(--on-app-bg);
-    padding: 0.4rem;
+    padding: clamp(0.2rem, 0.6cqh, 0.4rem);
 
     &:hover:not(:disabled) {
         border-color: var(--tertiary);

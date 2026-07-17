@@ -11,8 +11,9 @@
     min-height: 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     gap: clamp(0.3rem, 1.5vh, 1rem);
     overflow: hidden;
+    container-type: size;
+    container-name: main-area;
 }
